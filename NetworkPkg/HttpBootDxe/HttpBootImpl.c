@@ -600,7 +600,6 @@ HttpBootDxeLoadFile (
   MediaStatus = EFI_SUCCESS;
   NetLibDetectMediaWaitTimeout (Private->Controller, HTTP_BOOT_CHECK_MEDIA_WAITING_TIME, &MediaStatus);
   if (MediaStatus != EFI_SUCCESS) {
-    AsciiPrint ("\n  Error: Could not detect network connection.\n");
     return EFI_NO_MEDIA;
   }
 
