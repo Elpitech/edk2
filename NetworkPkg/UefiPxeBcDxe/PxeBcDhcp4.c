@@ -24,8 +24,8 @@ UINT8  mInterestedDhcp4Tags[PXEBC_DHCP4_TAG_INDEX_MAX] = {
 
 //
 // There are 4 times retries with the value of 4, 8, 16 and 32, refers to PXE2.1 spec.
-//
-UINT32  mPxeDhcpTimeout[4] = { 4, 8, 16, 32 };
+// Reduce to shorter intervals but keep the exponential backoff nature of the DHCP algorithm.
+UINT32  mPxeDhcpTimeout[4] = { 1, 2, 4, 8 };
 
 /**
   Parse a certain dhcp4 option by OptTag in Buffer, and return with start pointer.

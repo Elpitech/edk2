@@ -979,10 +979,11 @@ HttpBootDhcp6Sarr (
   Config.IaDescriptor.IaId     = NET_RANDOM (NetRandomInitSeed ());
   Config.IaDescriptor.Type     = EFI_DHCP6_IA_TYPE_NA;
   Config.SolicitRetransmission = Retransmit;
-  Retransmit->Irt              = 4;
-  Retransmit->Mrc              = 4;
-  Retransmit->Mrt              = 32;
-  Retransmit->Mrd              = 60;
+
+  Retransmit->Irt              = 1;
+  Retransmit->Mrc              = 2;
+  Retransmit->Mrt              = 8;
+  Retransmit->Mrd              = 16;
 
   //
   // Configure the DHCPv6 instance for HTTP boot.

@@ -23,8 +23,8 @@ UINT8  mInterestedDhcp4Tags[HTTP_BOOT_DHCP4_TAG_INDEX_MAX] = {
 
 //
 // There are 4 times retries with the value of 4, 8, 16 and 32, refers to UEFI 2.5 spec.
-//
-UINT32  mHttpDhcpTimeout[4] = { 4, 8, 16, 32 };
+// Reduce to shorter intervals but keep the exponential backoff nature of the DHCP algorithm.
+UINT32  mHttpDhcpTimeout[4] = { 1, 2, 4, 8 };
 
 /**
   Build the options buffer for the DHCPv4 request packet.
