@@ -37,4 +37,4 @@
 	url = ../ARMmbed/mbedtls
 [submodule "SecurityPkg/DeviceSecurity/SpdmLib/libspdm"]
 	path = SecurityPkg/DeviceSecurity/SpdmLib/libspdm
-	url = ../libspdm.git
+	url = ../Spdmlib/libspdm.git
